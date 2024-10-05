@@ -1,0 +1,6 @@
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.csproj.AssemblyReference.cache
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.AssemblyInfoInputs.cache
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.AssemblyInfo.cs
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.csproj.CoreCompileInputs.cache
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.sourcelink.json
