@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\SigmaSolve\\ProductManagement\\ProductManagement\\ProductManagement\\ProductManagement.csproj": {
-                "projectPath": "E:\\SigmaSolve\\ProductManagement\\ProductManagement\\ProductManagement\\ProductManagement.csproj"
+              "E:\\SigmaSolve\\ProductManagement\\ProductManagement.Models\\ProductManagement.Models\\ProductManagement.Models.csproj": {
+                "projectPath": "E:\\SigmaSolve\\ProductManagement\\ProductManagement.Models\\ProductManagement.Models\\ProductManagement.Models.csproj"
               }
             }
           }
@@ -49,6 +49,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -69,14 +85,14 @@
         }
       }
     },
-    "E:\\SigmaSolve\\ProductManagement\\ProductManagement\\ProductManagement\\ProductManagement.csproj": {
+    "E:\\SigmaSolve\\ProductManagement\\ProductManagement.Models\\ProductManagement.Models\\ProductManagement.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SigmaSolve\\ProductManagement\\ProductManagement\\ProductManagement\\ProductManagement.csproj",
-        "projectName": "ProductManagement",
-        "projectPath": "E:\\SigmaSolve\\ProductManagement\\ProductManagement\\ProductManagement\\ProductManagement.csproj",
+        "projectUniqueName": "E:\\SigmaSolve\\ProductManagement\\ProductManagement.Models\\ProductManagement.Models\\ProductManagement.Models.csproj",
+        "projectName": "ProductManagement.Models",
+        "projectPath": "E:\\SigmaSolve\\ProductManagement\\ProductManagement.Models\\ProductManagement.Models\\ProductManagement.Models.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\SigmaSolve\\ProductManagement\\ProductManagement\\ProductManagement\\obj\\",
+        "outputPath": "E:\\SigmaSolve\\ProductManagement\\ProductManagement.Models\\ProductManagement.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -111,15 +127,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
-              "version": "[8.0.8, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[2.2.5, )"
             }
           },
           "imports": [
@@ -134,9 +144,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

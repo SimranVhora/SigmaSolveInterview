@@ -3,14 +3,8 @@ using ProductManagement.Data;
 using ProductManagement.DataAccess.Repository.IRepository;
 
 namespace ProductManagement.DataAccess.Repository;
-public class Repository<T> : IRepository<T> where T : class
+public class RepositoryManagement<T>(ApplicationDbContext _context) : IRepository<T> where T : class
 {
-    private readonly ApplicationDbContext _context;
-
-    public Repository(ApplicationDbContext context)
-    {
-        _context = context;
-    }
 
     public async Task<IEnumerable<T>> GetAllAsync()
     {

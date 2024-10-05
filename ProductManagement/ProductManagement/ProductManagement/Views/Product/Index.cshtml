@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ProductManagement.Models.Entities.Product>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Product List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Product" asp-action="CreateProduct" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i>&nbsp; New Product
+            </a>
+        </div>
+    </div>
+</div>
+<table class="table table-bordered table-striped text-center" style="width:100%;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>SKU</th>
+            <th>Category Name</th>
+            <th>MRP</th>
+            <th>Description</th>
+            <th>Currency</th>
+            <th>ExpireDate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="width:50%">@item.Name</td>
+                <td style="width:30%">@item.SKU</td>
+                <td style="width:30%">@item.Category.CategoryName</td>
+                <td style="width:30%">@item.MRP</td>
+                <td style="width:30%">@item.Description</td>
+                <td style="width:30%">@item.Currency</td>
+                <td style="width:30%">@item.ExpireDate.ToShortDateString()</td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Category" asp-action="UpdateCategory" asp-route-id="@item.ProductId" class="btn btn-primary mx-2">
+                            <i class="bi bi-pencil-square"></i>Edit
+                        </a>
+                        <a asp-controller="Category" asp-action="DeleteCategory" asp-route-id="@item.ProductId" class="btn btn-danger mx-2">
+                            <i class="bi bi-trash-fill"></i>Delete
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

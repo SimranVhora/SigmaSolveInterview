@@ -1,0 +1,65 @@
+﻿@using ProductManagement.Models.Entities
+@model ProductManagement.Models.Entities.Product;
+<form method="post">
+    <div class="border p-5 mt-4">
+        <div class="row pt-2">
+            <h2 class="text-primary">Create Product</h2><hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input type="text" asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="SKU"></label>
+            <input type="text" asp-for="SKU" class="form-control" readonly />
+            <a class="btn btn-primary m-1 btn-sm" onclick="generateSKU()">Genrate SKU</a>
+            <span asp-validation-for="SKU" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CategoryId"></label>
+            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="BasePrice"></label>
+            <input type="number" asp-for="BasePrice" class="form-control" value="0"/>
+            <span asp-validation-for="BasePrice" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="MRP"></label>
+            <input type="number" asp-for="MRP" class="form-control"  value="0"/>
+            <span asp-validation-for="MRP" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+        <label asp-for="Description"></label>
+        <textarea  asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Currency"></label>
+            <select asp-for="Currency" class="form-control" asp-items="Html.GetEnumSelectList<CurrencyType>()"></select>
+            <span asp-validation-for="Currency" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ExpireDate" class="form-label"></label>
+            <input asp-for="ExpireDate" type="date" class="form-control" />
+            <span asp-validation-for="ExpireDate" class="text-danger"></span>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+            <a asp-controller="Product" asp-action="Index" class="btn btn-light">Back To List</a>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script>
+        function generateSKU() {
+            // Generate a random 6-character SKU (you can customize this logic)
+            const randomSKU = Math.random().toString(36).substring(2, 8).toUpperCase();
+            document.getElementById('skuInput').value = randomSKU;
+
+            // Optionally, you could also check if the SKU is unique by making an API call to check against existing SKUs.
+        }
+    </script>
+}

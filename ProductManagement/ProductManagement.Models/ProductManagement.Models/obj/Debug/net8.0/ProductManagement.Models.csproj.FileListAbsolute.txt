@@ -1,0 +1,13 @@
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\bin\Debug\net8.0\ProductManagement.Models.deps.json
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\bin\Debug\net8.0\ProductManagement.Models.dll
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\bin\Debug\net8.0\ProductManagement.Models.pdb
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\ProductManagement.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\ProductManagement.Models.AssemblyInfoInputs.cache
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\ProductManagement.Models.AssemblyInfo.cs
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\ProductManagement.Models.csproj.CoreCompileInputs.cache
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\ProductManagement.Models.sourcelink.json
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\ProductManagement.Models.dll
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\refint\ProductManagement.Models.dll
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\ProductManagement.Models.pdb
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\ref\ProductManagement.Models.dll
+E:\SigmaSolve\ProductManagement\ProductManagement.Models\ProductManagement.Models\obj\Debug\net8.0\ProductManagement.Models.csproj.AssemblyReference.cache

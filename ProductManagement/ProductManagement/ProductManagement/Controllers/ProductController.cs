@@ -1,49 +1,57 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using ProductManagement.DataAccess.Repository.IRepository;
 using ProductManagement.Models.Entities;
 
 namespace ProductManagement.Controllers;
-[Route("api/[controller]")]
-public class ProductController : Controller
+public class ProductController(IRepository<Product> _productRepository,IRepository<Category> _categoryRepository) : Controller
 {
-	[HttpGet]
-	private readonly IRepository<Product> _productRepository;
-	private readonly IRepository<Category> _categoryRepository;
-
-	public ProductsController(IRepository<Product> productRepository, IRepository<Category> categoryRepository)
+	public async Task<IActionResult> Index()
 	{
-		_productRepository = productRepository;
-		_categoryRepository = categoryRepository;
+        var products = await _productRepository.GetAllAsync(includeProperties: "Category");
+        return View(modal);
 	}
-
 	[HttpGet]
-	public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+	public async Task<IActionResult> CreateProduct()
 	{
-		var products = await _productRepository.GetAllAsync();
-		return Ok(products);
+        var categories = await _categoryRepository.GetAllAsync();
+        ViewBag.Categories = categories.Select(c => new SelectListItem
+        {
+            Value = c.CategoryId.ToString(), 
+            Text = c.CategoryName 
+        }).ToList(); 
+        return View();
 	}
-
 	[HttpPost]
-	public async Task<ActionResult<Product>> CreateProduct([FromBody] Product product)
+	public async Task<IActionResult> CreateProduct([FromBody] Product product)
 	{
-		await _productRepository.AddAsync(product);
-		return CreatedAtAction(nameof(GetProducts), new { id = product.ProductId }, product);
+		if (ModelState.IsValid)
+		{
+			_productRepository.AddAsync(product);
+			TempData["SuccessMessage"] = "Product Created successfully";
+			return RedirectToAction("Index");
+		}
+		return View(product);
 	}
-
-	[HttpPut("{id}")]
-	public async Task<IActionResult> UpdateProduct(int id, [FromBody] Product product)
+	public async Task<IActionResult> UpdateProduct( [FromBody] Product product)
 	{
-		if (id != product.ProductId)
-			return BadRequest();
-
 		await _productRepository.UpdateAsync(product);
 		return NoContent();
 	}
-
-	[HttpDelete("{id}")]
 	public async Task<IActionResult> DeleteProduct(int id)
 	{
-		await _productRepository.DeleteAsync(id);
-		return NoContent();
-	}
+		if (id == 0)
+        {
+            return NotFound();
+        }
+        var category = await _productRepository.GetByIdAsync(id);
+        if (category == null)
+        {
+            return NotFound();
+        }
+        await _productRepository.DeleteAsync(id);
+        TempData["SuccessMessage"] = "Category deleted successfully";
+        return RedirectToAction("Index");
+    }
 }
 

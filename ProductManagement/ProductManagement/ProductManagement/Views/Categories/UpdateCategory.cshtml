@@ -1,0 +1,27 @@
+﻿@using ProductManagement.Models.Entities
+@model ProductManagement.Models.Entities.Category;
+<form method="post">
+    <div class="border p-5 mt-4">
+        <div class="row pt-2">
+            <h2 class="text-primary">Update Category</h2><hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="CategoryId"></label>
+            <input type="text" asp-for="CategoryId" class="form-control" readonly />
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CategoryName"></label>
+            <input type="text" asp-for="CategoryName" class="form-control" readonly />
+            <span asp-validation-for="CategoryName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="IsActive"></label>
+            <input type="checkbox" asp-for="IsActive" class="form-check-input" />
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+            <a asp-controller="Categories" asp-action="Index" class="btn btn-light">Back To List</a>
+        </div>
+    </div>
+</form>

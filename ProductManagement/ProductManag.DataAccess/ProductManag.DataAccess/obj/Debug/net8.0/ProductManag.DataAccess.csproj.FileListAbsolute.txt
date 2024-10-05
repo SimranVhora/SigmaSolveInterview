@@ -4,3 +4,15 @@ E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\
 E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.AssemblyInfo.cs
 E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.csproj.CoreCompileInputs.cache
 E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.sourcelink.json
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\bin\Debug\net8.0\ProductManag.DataAccess.deps.json
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\bin\Debug\net8.0\ProductManag.DataAccess.dll
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\bin\Debug\net8.0\ProductManag.DataAccess.pdb
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductM.22ACA4C6.Up2Date
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.dll
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\refint\ProductManag.DataAccess.dll
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.pdb
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ref\ProductManag.DataAccess.dll
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\bin\Debug\net8.0\ProductManag.DataAccess.runtimeconfig.json
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\bin\Debug\net8.0\ProductManagement.Models.dll
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\bin\Debug\net8.0\ProductManagement.Models.pdb
+E:\SigmaSolve\ProductManagement\ProductManag.DataAccess\ProductManag.DataAccess\obj\Debug\net8.0\ProductManag.DataAccess.genruntimeconfig.cache
